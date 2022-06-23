@@ -32,26 +32,25 @@ def main():
   # value = sheet.cell(row=1, column=1).value
   # print(value)
 
-  # 書き込み: B1 に '<YYYY/MM/DD>' と書き込む
   cell = util.convCell("B1")
   startCell = util.convCell("A6")
   endCell = util.convCell("B6")
   asanaTaskNameCell = util.convCell("D6")
   detailCell = util.convCell("E6")
   remarksCell = util.convCell("F6")
-  print(f"cell[0]:{ cell[0] }, cell[1]:{ cell[1] }")
+  print(f"cell['row']:{ cell['row'] }, cell.['col']:{ cell['col'] }")
   # insert to cell: A1
   # op.1: with positional arguments
   # sheet.cell(row=1, column=2).value = todayDateSeparateWithSlash
   # op.2: without positional arguments
   # sheet.cell(1, 2).value = todayDateSeparateWithSlash
-  sheet.cell(cell[1], cell[0]).value = todayDateSeparateWithSlash
+  sheet.cell(row=cell['row'], column=cell['col']).value = todayDateSeparateWithSlash
   sheet.cell(row=2, column=2).value = myName
-  sheet.cell(startCell[1], startCell[0]).value = "10:00"
-  sheet.cell(endCell[1], endCell[0]).value = "19:00"
-  sheet.cell(asanaTaskNameCell[1], asanaTaskNameCell[0]).value = "some task"
-  sheet.cell(detailCell[1], detailCell[0]).value = "working detail"
-  sheet.cell(remarksCell[1], remarksCell[0]).value = "many bugs exists!"
+  sheet.cell(row=startCell['row'], column=startCell['col']).value = "10:00"
+  sheet.cell(row=endCell['row'], column=endCell['col']).value = "19:00"
+  sheet.cell(row=asanaTaskNameCell['row'], column=asanaTaskNameCell['col']).value = "some task"
+  sheet.cell(row=detailCell['row'], column=detailCell['col']).value = "working detail"
+  sheet.cell(row=remarksCell['row'], column=remarksCell['col']).value = "many bugs exists!"
 
   wb.save(distFilePath)
   wb.close()

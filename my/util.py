@@ -10,13 +10,12 @@ def hoge():
 #   return converted
 
 def convCell(address: str) -> List[int]:
+  converted = dict()
   # converted = None
   # if type(address) == List[int]:
   # 'A' -> 65 -> 1 となる変換
-  hoge = ord(address[0:1]) - 64
-  fuga = int(address[1:2])
-  # converted = f"{ hoge }{ fuga }"
-  converted = [hoge, fuga]
+  converted['col'] = ord(address[0:1]) - 64
+  converted['row'] = int(address[1:2])
   return converted
 
 # if __name__ == '__main__':
