@@ -16,7 +16,7 @@ def main():
   todayDateSeparateWithSlash = datetime.now().strftime("%Y/%m/%d")
   templateFilePath = './template/YYYYMMDD_業務日報_.xlsx'
   distFilePath = os.path.join(dist, f"{ todayDate }_業務日報_.xlsx")
-  targetSheet = '業務報告書'
+  targetSheet = os.getenv('TARGET_SHEET')
 
   # template からコピーして新規ファイル作成
   shutil.copyfile(templateFilePath, distFilePath)
