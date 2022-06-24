@@ -9,7 +9,7 @@ def hoge():
 #     converted = f"{ address[0] - 1 + 65 }{ address[1] }"
 #   return converted
 
-def convCell(address: str) -> List[int]:
+def convCell(address: str) -> dict:
   converted = dict()
   # converted = None
   # if type(address) == List[int]:
