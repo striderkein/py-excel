@@ -3,6 +3,11 @@
 ## requires
 - Python ^3.7.0
 
+## How to install
+```
+./install.sh
+```
+
 ## How to setup
 step-1
 ```
