@@ -18,6 +18,7 @@ step-2: modify `.env` according to your environment.
 
 - TARGET_SHEET: 出力先シート名（テンプレートとなる「YYYYMMDD_業務日報_.xlsx」に変更がない限り編集不要）
 - CURRENT_USER_NAME: 日報提出者（you!）の氏名
+- DIST: 日報の出力先ディレクトリ
 
 ## How to use
 ```

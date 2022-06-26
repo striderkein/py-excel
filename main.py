@@ -12,7 +12,7 @@ def main():
   load_dotenv()
   myName = os.getenv('CURRENT_USER_NAME')
 
-  dist = os.path.expanduser('~/Documents/daily_repo/dist')
+  dist = os.path.expanduser(os.getenv('DIST'))
   todayDate = datetime.now().strftime("%Y%m%d")
   todayDateSeparateWithSlash = datetime.now().strftime("%Y/%m/%d")
   templateFilePath = './template/YYYYMMDD_業務日報_.xlsx'
