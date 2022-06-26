@@ -9,7 +9,7 @@ from my import util
 
 def main():
   load_dotenv()
-  myName = os.getenv('CURRENT_USER_NAME_JP')
+  myName = os.getenv('CURRENT_USER_NAME')
 
   dist = os.path.expanduser('~/Documents/daily_repo/dist')
   todayDate = datetime.now().strftime("%Y%m%d")
