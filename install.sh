@@ -1,4 +1,3 @@
 #!/bin/sh
 
-ln -s $(pwd)/main.sh /usr/local/bin/sillywork
-
+ln -s $(pwd)/sillywork.sh /usr/local/bin/sillywork
