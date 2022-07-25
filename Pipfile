@@ -3,6 +3,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[scripts]
+start = "python main.py"
+isort = "isort -rc ."
+
 [packages]
 aiohttp = "==3.8.0"
 aiohttp-cors = "==0.7.0"
