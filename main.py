@@ -37,8 +37,9 @@ def main():
 
   repo = 'art-lesson'
   asanaTaskName = 'some asana task'
+  since = 'last thursday'
   # command = f'cd ~/dev/{ repo };git log --oneline --branches --reverse --date=short --author=\"$(git config user.name)\" --pretty=format:\"- [%ad] %h: %s\" --since=\"last day\"'
-  command = f'cd ~/dev/{ repo };git log --oneline --branches --reverse --date=short --author=\"$(git config user.name)\" --pretty=format:\"%h|%s\" --since=\"last day\"'
+  command = f'cd ~/dev/{ repo };git log --oneline --branches --reverse --date=short --author=\"$(git config user.name)\" --pretty=format:\"%h|%s\" --since=\"{ since }\"'
   stream = os.popen(command)
   logs = stream.read().split('\n')
 
